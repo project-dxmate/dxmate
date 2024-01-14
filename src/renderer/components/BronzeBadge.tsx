@@ -7,7 +7,7 @@ const tierPosition = {
     },
     small: {
         top: '79%',
-        left: '33.5%'
+        left: '50%'
     }
 }
 
