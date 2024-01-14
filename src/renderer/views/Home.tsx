@@ -136,6 +136,15 @@ export const Home = () => {
                     </button>
                 </div>
             </div>
+
+            <div style={{
+                position: 'absolute',
+                left: '20px',
+                bottom: '20px'
+            }} >
+                <p style={{ color: 'white', marginBottom: 0 }}>EAST ASIA</p>
+                <p style={{ color: 'white', marginTop: '5px' }}>🟢 30</p>
+            </div>
         </div>
     )
 }
