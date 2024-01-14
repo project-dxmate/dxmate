@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import appLogo from '../styles/images/logo/0.png'
 import slippiLogo from '../styles/images/logo/1.png'
 import startggLogo from '../styles/images/logo/2.png'
+import graphIcon from '../styles/images/icon/0.png'
 
 // 変動するパラメータ: tier
 
@@ -144,6 +145,38 @@ export const Home = () => {
             }} >
                 <p style={{ color: 'white', marginBottom: 0 }}>EAST ASIA</p>
                 <p style={{ color: 'white', marginTop: '5px' }}>🟢 30</p>
+            </div>
+
+            <div style={{
+                position: 'absolute',
+                right: '20px',
+                bottom: '20px'
+            }} >
+                <button style={{
+                        width: '60px',
+                        backgroundColor: 'white',
+                        border: '3px solid white',
+                        borderRadius: '8px',
+                        display: 'flex',
+                        flexDirection: 'row',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        transition: '0.3s ease',
+                        fontFamily: 'Poppins, sans-serif'
+                    }}
+                    onMouseOver={(e) => {
+                        e.currentTarget.style.backgroundColor = '#b0b0b0';
+                        e.currentTarget.style.borderColor = '#b0b0b0';
+                    } }
+                    onMouseOut={(e) => {
+                        e.currentTarget.style.backgroundColor = 'white';
+                        e.currentTarget.style.borderColor = 'white';
+                    } }
+                    >
+                        <img style={{
+                            width: '20px'
+                        }} src={graphIcon} />
+                    </button>
             </div>
         </div>
     )
