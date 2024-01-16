@@ -4,8 +4,6 @@ import slippiLogo from '../styles/images/logo/1.png'
 import startggLogo from '../styles/images/logo/2.png'
 import graphIcon from '../styles/images/icon/0.png'
 
-// 変動するパラメータ: tier
-
 export const Home = () => {
     const [windowSize, setWindowSize] = useState({
         width: window.innerWidth,
