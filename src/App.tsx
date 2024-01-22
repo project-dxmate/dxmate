@@ -4,11 +4,12 @@ import { Home } from './renderer/views/Home';
 import { Login } from './renderer/views/Login';
 import { Match } from './renderer/views/Match';
 import { Loading } from './renderer/views/Loading';
+import { Stats } from './renderer/views/Stats';
 
 function App() {
   return (
     <div className="App">
-      <Loading />
+      <Stats />
     </div>
   );
 }
