@@ -9,7 +9,7 @@ import { Stats } from './renderer/views/Stats';
 function App() {
   return (
     <div className="App">
-      <Stats />
+      <Login />
     </div>
   );
 }

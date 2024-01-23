@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import applogo from '../styles/images/logo/4.png';
+import { loadStartggCredentials } from "../../utils/loadStartggCredentials";
 
-export const Loading = () => {
+export const Loading = async ({ stage }: { stage: 'LAUNCH' }) => {
     const [windowSize, setWindowSize] = useState({
         width: window.innerWidth,
         height: window.innerHeight
@@ -21,6 +22,23 @@ export const Loading = () => {
             window.removeEventListener('resize', handleResize);
         };
     }, []);
+
+    if (stage === 'LAUNCH') {
+        console.log('Starting app...');
+
+        // start.ggの資格情報を取得する
+        const startggCredentials = await loadStartggCredentials();
+        console.log('Loaded start.gg credentials:', startggCredentials);
+
+        // 資格情報がなければログインへ
+        if (!startggCredentials) {
+            console.log('No start.gg credentials found, so need to sign in.');
+
+            return;
+        }
+
+        console.log('start.gg credentials found.');
+    }
 
     return (
         <div style={{
